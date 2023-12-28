@@ -261,9 +261,6 @@
 		07EEB7DA2A4C4284002C7E4D /* AGMemberHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB7D92A4C4284002C7E4D /* AGMemberHttp.m */; };
 		07EEB7DD2A4C45EA002C7E4D /* AGMemberData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB7DC2A4C45EA002C7E4D /* AGMemberData.m */; };
 		07EEB7E32A4D3102002C7E4D /* PrivacyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB7E12A4D3102002C7E4D /* PrivacyWebViewController.m */; };
-		07EEB7E92A4D4374002C7E4D /* YTXMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EEB7E62A4D4374002C7E4D /* YTXMonitor.framework */; };
-		07EEB7EA2A4D4374002C7E4D /* ATAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EEB7E72A4D4374002C7E4D /* ATAuthSDK.framework */; };
-		07EEB7EB2A4D4374002C7E4D /* YTXOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EEB7E82A4D4374002C7E4D /* YTXOperators.framework */; };
 		07EEB7EE2A4D7BB1002C7E4D /* AGHomePostDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB7ED2A4D7BB1002C7E4D /* AGHomePostDetailBottomView.m */; };
 		07EEB7F12A4D7D6D002C7E4D /* AGCircleCommentHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB7F02A4D7D6D002C7E4D /* AGCircleCommentHttp.m */; };
 		07EEB7F72A4D87D8002C7E4D /* AGCircleCommentData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEB7F62A4D87D8002C7E4D /* AGCircleCommentData.m */; };
@@ -281,6 +278,10 @@
 		07F219CB2AC13B4C0044E5B1 /* AGCircleTableViewCellNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F219CA2AC13B4C0044E5B1 /* AGCircleTableViewCellNew.m */; };
 		07F4BC0D2AE118F800DCFC8E /* AGVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F4BC0C2AE118F800DCFC8E /* AGVideoPlayerViewController.m */; };
 		07F5EBF42A3C037500B3A0F5 /* AGHomePostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5EBF32A3C037500B3A0F5 /* AGHomePostTableViewCell.m */; };
+		4C8141B02B3D4E0300A12112 /* YTXOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8141AC2B3D4E0200A12112 /* YTXOperators.framework */; };
+		4C8141B12B3D4E0300A12112 /* YTXMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8141AD2B3D4E0200A12112 /* YTXMonitor.framework */; };
+		4C8141B22B3D4E0300A12112 /* ATAuthSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C8141AE2B3D4E0300A12112 /* ATAuthSDK.bundle */; };
+		4C8141B32B3D4E0300A12112 /* ATAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8141AF2B3D4E0300A12112 /* ATAuthSDK.framework */; };
 		4CFD5C142AFDD5A100281FA3 /* SZFinessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD5C132AFDD5A100281FA3 /* SZFinessController.m */; };
 		4CFD5C172AFDDA4E00281FA3 /* SZFinessItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD5C162AFDDA4E00281FA3 /* SZFinessItemCell.m */; };
 		4CFD5C1A2AFDDC6100281FA3 /* SZFinessContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD5C192AFDDC6100281FA3 /* SZFinessContentView.m */; };
@@ -766,9 +767,6 @@
 		07EEB7DC2A4C45EA002C7E4D /* AGMemberData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGMemberData.m; sourceTree = "<group>"; };
 		07EEB7E12A4D3102002C7E4D /* PrivacyWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyWebViewController.m; sourceTree = "<group>"; };
 		07EEB7E22A4D3102002C7E4D /* PrivacyWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyWebViewController.h; sourceTree = "<group>"; };
-		07EEB7E62A4D4374002C7E4D /* YTXMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXMonitor.framework; sourceTree = "<group>"; };
-		07EEB7E72A4D4374002C7E4D /* ATAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ATAuthSDK.framework; sourceTree = "<group>"; };
-		07EEB7E82A4D4374002C7E4D /* YTXOperators.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXOperators.framework; sourceTree = "<group>"; };
 		07EEB7EC2A4D7BB1002C7E4D /* AGHomePostDetailBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGHomePostDetailBottomView.h; sourceTree = "<group>"; };
 		07EEB7ED2A4D7BB1002C7E4D /* AGHomePostDetailBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGHomePostDetailBottomView.m; sourceTree = "<group>"; };
 		07EEB7EF2A4D7D6D002C7E4D /* AGCircleCommentHttp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGCircleCommentHttp.h; sourceTree = "<group>"; };
@@ -803,6 +801,10 @@
 		07F4BC0C2AE118F800DCFC8E /* AGVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGVideoPlayerViewController.m; sourceTree = "<group>"; };
 		07F5EBF22A3C037500B3A0F5 /* AGHomePostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGHomePostTableViewCell.h; sourceTree = "<group>"; };
 		07F5EBF32A3C037500B3A0F5 /* AGHomePostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGHomePostTableViewCell.m; sourceTree = "<group>"; };
+		4C8141AC2B3D4E0200A12112 /* YTXOperators.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXOperators.framework; sourceTree = "<group>"; };
+		4C8141AD2B3D4E0200A12112 /* YTXMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXMonitor.framework; sourceTree = "<group>"; };
+		4C8141AE2B3D4E0300A12112 /* ATAuthSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ATAuthSDK.bundle; sourceTree = "<group>"; };
+		4C8141AF2B3D4E0300A12112 /* ATAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ATAuthSDK.framework; sourceTree = "<group>"; };
 		4CFD5C122AFDD5A100281FA3 /* SZFinessController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFinessController.h; sourceTree = "<group>"; };
 		4CFD5C132AFDD5A100281FA3 /* SZFinessController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFinessController.m; sourceTree = "<group>"; };
 		4CFD5C152AFDDA4E00281FA3 /* SZFinessItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFinessItemCell.h; sourceTree = "<group>"; };
@@ -835,10 +837,10 @@
 				07819CF52A57B1D500C3DE37 /* SystemConfiguration.framework in Frameworks */,
 				07EEB8182A4EF49F002C7E4D /* AuthenticationServices.framework in Frameworks */,
 				07819CED2A55A60E00C3DE37 /* WebKit.framework in Frameworks */,
+				4C8141B12B3D4E0300A12112 /* YTXMonitor.framework in Frameworks */,
 				07819CF72A57B1E800C3DE37 /* CoreTelephony.framework in Frameworks */,
-				07EEB7EA2A4D4374002C7E4D /* ATAuthSDK.framework in Frameworks */,
-				07EEB7EB2A4D4374002C7E4D /* YTXOperators.framework in Frameworks */,
-				07EEB7E92A4D4374002C7E4D /* YTXMonitor.framework in Frameworks */,
+				4C8141B32B3D4E0300A12112 /* ATAuthSDK.framework in Frameworks */,
+				4C8141B02B3D4E0300A12112 /* YTXOperators.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1964,14 +1966,15 @@
 		5600CA09CA580D289375467B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C8141AE2B3D4E0300A12112 /* ATAuthSDK.bundle */,
+				4C8141AF2B3D4E0300A12112 /* ATAuthSDK.framework */,
+				4C8141AD2B3D4E0200A12112 /* YTXMonitor.framework */,
+				4C8141AC2B3D4E0200A12112 /* YTXOperators.framework */,
 				07D2CC552A6A3C36009FD9A9 /* StoreKit.framework */,
 				07819CF62A57B1E800C3DE37 /* CoreTelephony.framework */,
 				07819CF42A57B1D500C3DE37 /* SystemConfiguration.framework */,
 				07819CEC2A55A60E00C3DE37 /* WebKit.framework */,
 				07EEB8172A4EF49E002C7E4D /* AuthenticationServices.framework */,
-				07EEB7E72A4D4374002C7E4D /* ATAuthSDK.framework */,
-				07EEB7E62A4D4374002C7E4D /* YTXMonitor.framework */,
-				07EEB7E82A4D4374002C7E4D /* YTXOperators.framework */,
 				D14DD71F77E1F276094FF838 /* Pods_Arcadegame.framework */,
 			);
 			name = Frameworks;
@@ -2129,6 +2132,7 @@
 				0752706F2A3584F700B18D2A /* centerIcon_cicle@3x.png in Resources */,
 				070C440E2A35880800BFA0B9 /* BLImagePicker.storyboard in Resources */,
 				07184C8A2ADE85CB00AAC055 /* player_value1_desfullscreen_high@3x.png in Resources */,
+				4C8141B22B3D4E0300A12112 /* ATAuthSDK.bundle in Resources */,
 				07526E7C2A34763D00B18D2A /* Assets.xcassets in Resources */,
 				07184C9B2ADE880300AAC055 /* sliderImage@2x.png in Resources */,
 				070C447C2A358A8000BFA0B9 /* QuickBaseConfig.plist in Resources */,
@@ -2647,6 +2651,61 @@
 				);
 				MARKETING_VERSION = 1.4;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaAsyncSocket\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JSONModel\"",
+					"-framework",
+					"\"JXCategoryView\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MCUIColorUtils\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactiveObjC\"",
+					"-framework",
+					"\"SDCycleScrollView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UICountingLabel\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WMPageController\"",
+					"-framework",
+					"\"WsRTC\"",
+					"-framework",
+					"\"pop\"",
+					"-ObjC",
+					"-framework",
+					"\"YTXOperators\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abner.qiao.Arcadegame-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2699,6 +2758,61 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.4;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaAsyncSocket\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JSONModel\"",
+					"-framework",
+					"\"JXCategoryView\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MCUIColorUtils\"",
+					"-framework",
+					"\"MJExtension\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactiveObjC\"",
+					"-framework",
+					"\"SDCycleScrollView\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Toast\"",
+					"-framework",
+					"\"UICountingLabel\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WMPageController\"",
+					"-framework",
+					"\"WsRTC\"",
+					"-framework",
+					"\"pop\"",
+					"-ObjC",
+					"-framework",
+					"\"YTXOperators\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abner.qiao.Arcadegame-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

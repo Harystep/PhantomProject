@@ -130,6 +130,8 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 @property (nonatomic, strong) UIImage *backgroundImage;
 /** 授权页背景图片view的 content mode，默认为 UIViewContentModeScaleAspectFill */
 @property (nonatomic, assign) UIViewContentMode backgroundImageContentMode;
+/** 点击授权页背景是否关闭授权页，只有在弹窗模式下生效，默认NO*/
+@property (nonatomic, assign) BOOL tapAuthPageMaskClosePage;
 
 #pragma mark- logo图片
 /** logo图片设置 */
@@ -160,7 +162,7 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 #pragma mark- 号码
 /** 号码颜色设置 */
 @property (nonatomic, strong) UIColor *numberColor;
-/** 号码字体大小设置，大小小于16则不生效 */
+/** 号码字体设置，大小小于16则不生效 */
 @property (nonatomic, strong) UIFont *numberFont;
 
 /**
@@ -228,6 +230,14 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 @property (nonatomic, copy) NSArray<NSString *> *privacyConectTexts;
 /** 协议内容颜色数组，[非点击文案颜色，点击文案颜色] */
 @property (nonatomic, copy) NSArray<UIColor *> *privacyColors;
+/** 运营商协议内容颜色 ，优先级最高，如果privacyOperatorColors不设置，则取privacyColors中的点击文案颜色，privacyColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyOperatorColor;
+/** 协议1内容颜色，优先级最高，如果privacyOneColors不设置，则取privacyColors中的点击文案颜色，privacyColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyOneColor;
+/** 协议2内容颜色，优先级最高，如果privacyTwoColors不设置，则取privacyColors中的点击文案颜色，privacyColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyTwoColor;
+/** 协议3内容颜色，优先级最高，如果privacyThreeColors不设置，则取privacyColors中的点击文案颜色，privacyColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyThreeColor;
 /** 协议文案支持居中、居左、居右设置，默认居左 */
 @property (nonatomic, assign) NSTextAlignment privacyAlignment;
 /** 协议整体文案，前缀部分文案 */
@@ -240,8 +250,12 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 @property (nonatomic, copy) NSString *privacyOperatorSufText;
 /** 运营商协议指定显示顺序，默认0，即第1个协议显示，最大值可为3，即第4个协议显示*/
 @property (nonatomic, assign) NSInteger privacyOperatorIndex;
-/** 协议整体文案字体大小，小于12.0不生效 */
+/** 协议整体文案字体，小于12.0不生效 */
 @property (nonatomic, strong) UIFont *privacyFont;
+/** 运营商协议文案字体，仅对运营商协议本体文案和前后缀生效，小于12.0不生效 */
+@property (nonatomic, strong) UIFont *privacyOperatorFont;
+/** 运营商协议文案下划线，仅对运营商协议本体文案和前后缀生效，YES：展示下划线；NO：不展示下划线，默认不展示 */
+@property (nonatomic, assign) BOOL privacyOperatorUnderline;
 /** checkBox是否扩大按钮可交互范围至"协议前缀部分文案(默认:我已阅读并同意)"区域，默认NO */
 @property (nonatomic, assign) BOOL expandAuthPageCheckedScope;
 
@@ -255,6 +269,10 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
  *  未同意协议时点击登录按钮，协议整体文案的动画效果，不设置或设置为nil默认没有动画，SDK内部会主动更改动画的一些属性（包括：removedOnCompletion = NO、fillMode = kCAFillModeRemoved 及 delegate）
  */
 @property (nonatomic, strong, nullable) CAAnimation *privacyAnimation;
+/**
+ *  未同意协议时点击登录按钮，checkbox的动画效果，不设置或设置为nil默认没有动画，SDK内部会主动更改动画的一些属性（包括：removedOnCompletion = NO、fillMode = kCAFillModeRemoved 及 delegate）
+ */
+@property (nonatomic, strong, nullable) CAAnimation *checkboxAnimation;
 /** 协议整体相对屏幕底部的Y轴距离，与其他有区别！！不能小于0 */
 @property (nonatomic, assign) CGFloat privacyBottomOffetY DEPRECATED_MSG_ATTRIBUTE("Please use privacyFrameBlock instead");
 /** 协议整体（包括checkBox）相对content view的左右边距，当协议整体宽度小于（content view宽度-2*左右边距）且居中模式，则左右边距设置无效，不能小于0 */
@@ -288,7 +306,7 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 /**
  * 自定义控件添加，注意：自定义视图的创建初始化和添加到父视图，都需要在主线程！！
  * @param  superCustomView 父视图
-*/
+ */
 @property (nonatomic, copy) void(^customViewBlock)(UIView *superCustomView);
 
 /**
@@ -303,7 +321,7 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
  *  @param  loginFrame 登录按钮的frame
  *  @param  changeBtnFrame 切换到其他方式按钮的frame
  *  @param  privacyFrame 协议整体（包括checkBox）的frame
-*/
+ */
 @property (nonatomic, copy) void(^customViewLayoutBlock)(CGSize screenSize, CGRect contentViewFrame, CGRect navFrame, CGRect titleBarFrame, CGRect logoFrame, CGRect sloganFrame, CGRect numberFrame, CGRect loginFrame, CGRect changeBtnFrame, CGRect privacyFrame);
 
 #pragma mark - 二次隐私协议弹窗设置
@@ -323,7 +341,7 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 @property (nonatomic, assign) CGFloat privacyAlertAlpha;
 /** 二次隐私协议弹窗标题文字内容，默认"请阅读并同意以下条款" */
 @property (nonatomic, copy) NSString *privacyAlertTitleContent;
-/** 二次隐私协议弹窗标题文字大小，最小12，默认12 */
+/** 二次隐私协议弹窗标题文字字体，最小12，默认12 */
 @property (nonatomic, strong) UIFont *privacyAlertTitleFont;
 /** 二次隐私协议弹窗标题文字颜色，默认黑色 */
 @property (nonatomic, strong) UIColor *privacyAlertTitleColor;
@@ -331,21 +349,39 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 @property (nonatomic, strong) UIColor *privacyAlertTitleBackgroundColor;
 /** 二次隐私协议弹窗标题位置，默认居中*/
 @property (nonatomic, assign) NSTextAlignment privacyAlertTitleAlignment;
-/** 二次隐私协议弹窗协议内容文字大小，最小12，默认12 */
+/** 二次隐私协议弹窗协议内容文字字体，最小12，默认12 */
 @property (nonatomic, strong) UIFont *privacyAlertContentFont;
 /** 二次隐私协议弹窗协议内容背景颜色，默认白色 */
 @property (nonatomic, strong) UIColor *privacyAlertContentBackgroundColor;
 /** 二次隐私协议弹窗协议内容颜色数组，[非点击文案颜色，点击文案颜色],默认[0x999999,0x1890FF] */
 @property (nonatomic, copy) NSArray<UIColor *> *privacyAlertContentColors;
+/** 二次隐私协议弹窗运营商协议内容文字字体，仅对运营商协议部分的文本生效，最小12，默认12 */
+@property (nonatomic, strong) UIFont *privacyAlertContentOperatorFont;
+/** 二次隐私协议弹窗运营商协议内容文字下划线，仅对运营商协议部分的文本生效，YES：展示下划线，NO：不展示下划线，默认不展示 */
+@property (nonatomic, assign) BOOL privacyAlertContentUnderline;
+/** 二次隐私协议弹窗协议运营商协议内容颜色，优先级最高，如果privacyAlertOperatorColors不设置，则取privacyAlertContentColors中的点击文案颜色，privacyAlertContentColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyAlertOperatorColor;
+/** 二次隐私协议弹窗协议协议1内容颜色 ，优先级最高，如果privacyAlertOneColors不设置，则取privacyAlertContentColors中的点击文案颜色，privacyAlertContentColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyAlertOneColor;
+/** 二次隐私协议弹窗协议协议2内容颜色 ，优先级最高，如果privacyAlertTwoColors不设置，则取privacyAlertContentColors中的点击文案颜色，privacyAlertContentColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyAlertTwoColor;
+/** 二次隐私协议弹窗协议协议3内容颜色 ，优先级最高，如果privacyAlertThreeColors不设置，则取privacyAlertContentColors中的点击文案颜色，privacyAlertContentColors不设置，则是默认色*/
+@property (nonatomic, strong) UIColor *privacyAlertThreeColor;
 /** 二次隐私协议弹窗协议文案支持居中、居左、居右设置，默认居左 */
 @property (nonatomic, assign) NSTextAlignment privacyAlertContentAlignment;
+
+/** 二次隐私协议弹窗协议整体文案，前缀部分文案 ,如果不赋值，默认使用privacyPreText*/
+@property (nonatomic, copy) NSString *privacyAlertPreText;
+/** 二次隐私协议弹窗协议整体文案，后缀部分文案 如果不赋值，默认使用privacySufText*/
+@property (nonatomic, copy) NSString *privacyAlertSufText;
+
 /** 二次隐私协议弹窗按钮文字内容 默认“同意”*/
 @property (nonatomic, copy) NSString *privacyAlertBtnContent;
 /** 二次隐私协议弹窗按钮按钮背景图片 ,默认高度50.0pt，@[激活状态的图片,高亮状态的图片] */
 @property (nonatomic, copy) NSArray<UIImage *> *privacyAlertBtnBackgroundImages;
 /** 二次隐私协议弹窗按钮文字颜色，默认黑色, @[激活状态的颜色,高亮状态的颜色] */
 @property (nonatomic, copy) NSArray<UIColor *> *privacyAlertButtonTextColors;
-/** 二次隐私协议弹窗按钮文字大小，最小10，默认18*/
+/** 二次隐私协议弹窗按钮文字字体，最小10，默认18*/
 @property (nonatomic, strong) UIFont *privacyAlertButtonFont;
 /** 二次隐私协议弹窗关闭按钮是否显示，默认显示 */
 @property (nonatomic, assign) BOOL privacyAlertCloseButtonIsNeedShow;
@@ -376,8 +412,8 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
 
 /**
  * 二次授权页弹窗自定义控件添加，注意：自定义视图的创建初始化和添加到父视图，都需要在主线程！！
- * @param  superCustomView 父视图
-*/
+ * @param  superPrivacyAlertCustomView 父视图
+ */
 @property (nonatomic, copy) void(^privacyAlertCustomViewBlock)(UIView *superPrivacyAlertCustomView);
 
 /**
@@ -387,7 +423,7 @@ typedef CGRect(^PNSBuildFrameBlock)(CGSize screenSize, CGSize superViewSize, CGR
  *  @param  privacyAlertPrivacyContentFrame 二次授权页弹窗协议内容frame
  *  @param  privacyAlertButtonFrame 二次授权页弹窗确认按钮frame
  *  @param  privacyAlertCloseFrame 二次授权页弹窗右上角关闭按钮frame
-*/
+ */
 @property (nonatomic, copy) void(^privacyAlertCustomViewLayoutBlock)(CGRect privacyAlertFrame, CGRect privacyAlertTitleFrame, CGRect privacyAlertPrivacyContentFrame, CGRect privacyAlertButtonFrame, CGRect privacyAlertCloseFrame);
 
 @end
