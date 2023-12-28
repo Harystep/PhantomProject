@@ -1,0 +1,29 @@
+diff a/Arcadegame.xcodeproj/project.pbxproj b/Arcadegame.xcodeproj/project.pbxproj	(rejected hunks)
+@@ -292,6 +292,8 @@
+ 		07C9B83D2A3AE07A003351F8 /* AGHomeBoardGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C9B83C2A3AE07A003351F8 /* AGHomeBoardGameView.m */; };
+ 		07D29F362A42DBAD00B184F8 /* AGCicleHomeOtherHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D29F352A42DBAD00B184F8 /* AGCicleHomeOtherHttp.m */; };
+ 		07F5EBF42A3C037500B3A0F5 /* AGHomePostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F5EBF32A3C037500B3A0F5 /* AGHomePostTableViewCell.m */; };
++		1745B36A2A49A75A001909EE /* AGHotGameBackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1745B3692A49A75A001909EE /* AGHotGameBackCollectionViewCell.m */; };
++		1745B36D2A49A8E4001909EE /* AGHotGameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1745B36C2A49A8E4001909EE /* AGHotGameCollectionViewCell.m */; };
+ 		B99BE33115D6865343B12284 /* Pods_Arcadegame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14DD71F77E1F276094FF838 /* Pods_Arcadegame.framework */; };
+ /* End PBXBuildFile section */
+ 
+@@ -865,6 +867,10 @@
+ 		07D29F352A42DBAD00B184F8 /* AGCicleHomeOtherHttp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGCicleHomeOtherHttp.m; sourceTree = "<group>"; };
+ 		07F5EBF22A3C037500B3A0F5 /* AGHomePostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGHomePostTableViewCell.h; sourceTree = "<group>"; };
+ 		07F5EBF32A3C037500B3A0F5 /* AGHomePostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGHomePostTableViewCell.m; sourceTree = "<group>"; };
++		1745B3682A49A75A001909EE /* AGHotGameBackCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGHotGameBackCollectionViewCell.h; sourceTree = "<group>"; };
++		1745B3692A49A75A001909EE /* AGHotGameBackCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGHotGameBackCollectionViewCell.m; sourceTree = "<group>"; };
++		1745B36B2A49A8E4001909EE /* AGHotGameCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGHotGameCollectionViewCell.h; sourceTree = "<group>"; };
++		1745B36C2A49A8E4001909EE /* AGHotGameCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGHotGameCollectionViewCell.m; sourceTree = "<group>"; };
+ 		8F6F52C1D2A3EA343333E7A8 /* Pods-Arcadegame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arcadegame.release.xcconfig"; path = "Target Support Files/Pods-Arcadegame/Pods-Arcadegame.release.xcconfig"; sourceTree = "<group>"; };
+ 		D14DD71F77E1F276094FF838 /* Pods_Arcadegame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arcadegame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+ /* End PBXFileReference section */
+@@ -2487,6 +2498,7 @@
+ 				070C43F32A35880800BFA0B9 /* ESHomeCommissionTableViewCell.m in Sources */,
+ 				070C44462A35880800BFA0B9 /* ESBankCardbinHelp.m in Sources */,
+ 				070C44802A358A8000BFA0B9 /* ESImageLinkHelper.m in Sources */,
++				1745B36D2A49A8E4001909EE /* AGHotGameCollectionViewCell.m in Sources */,
+ 				0752706C2A3584F700B18D2A /* UIScrollView+ABProgressRefresh.m in Sources */,
+ 				070C44412A35880800BFA0B9 /* ESOrderData.m in Sources */,
+ 				070C44332A35880800BFA0B9 /* ESCollectionData.m in Sources */,

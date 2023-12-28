@@ -1,0 +1,6 @@
+framework module Pods_Arcadegame {
+  umbrella header "Pods-Arcadegame-umbrella.h"
+
+  export *
+  module * { export * }
+}

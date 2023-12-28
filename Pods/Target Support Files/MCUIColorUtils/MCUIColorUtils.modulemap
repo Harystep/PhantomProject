@@ -1,0 +1,6 @@
+framework module MCUIColorUtils {
+  umbrella header "MCUIColorUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}
